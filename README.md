@@ -1,3 +1,12 @@
+# Linguagens
+
+- React
+- Typescript
+
+# Layout
+
+  <img src="https://media.discordapp.net/attachments/747236883284754452/854753139290931240/Captura_de_tela_de_2021-06-16_13-03-35.png?width=680&height=383">
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
