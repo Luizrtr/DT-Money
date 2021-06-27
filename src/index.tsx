@@ -10,7 +10,8 @@ createServer({
   
   seeds(server){
     server.db.loadData({
-      transactions:[{
+      transactions:[
+      {
         id: 1,
         title: 'Freelance de Website',
         type: 'deposit',
@@ -21,7 +22,7 @@ createServer({
       {  
         id: 2,
         title: 'Aluguel',
-        type: 'widthdraw',
+        type: 'withdraw',
         category: 'Casa',
         amount: 1100,
         createdAt: new Date('2021-02-14 11:00:00'),
@@ -33,11 +34,11 @@ createServer({
   routes(){
     this.namespace = 'api'; //
 
-    this.get('/trasinctions', () => {
+    this.get('/transactions', () => {
       return this.schema.all('transaction')
     })
 
-    this.post('/trasinctions', (schema, request) => {
+    this.post('/transactions', (schema, request) => {
       const data = JSON.parse(request.requestBody)
       return schema.create('transaction', data);
     })
