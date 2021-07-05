@@ -16,7 +16,7 @@ interface TransactionsProviderProps {
 
 interface TransactionsContextData{
     transactions: Transaction[];
-    creacteTransaction: (transaction: TransactionInput ) => void;
+    createTransaction: (transaction: TransactionInput ) => void;
 }
 // interface TransactionInput{
 //     title:string;
@@ -24,11 +24,11 @@ interface TransactionsContextData{
 //     type: string;
 //     createdAt:string;
 // }
-type TransactionInput  = Omit<Transaction, 'id' | 'creacteAt'>; // TransactionInput vai herdar todos os campos do Transaction menos os campos destacado no função 
-// type TransactionInput = Pick<Transaction, 'title' | 'amount' | 'type' | 'category'>;  
+// type TransactionInput  = Omit<Transaction, 'id' | 'creacteAt'>; // TransactionInput vai herdar todos os campos do Transaction menos os campos destacado no função 
+type TransactionInput = Pick<Transaction, 'title' | 'amount' | 'type' | 'category'>;  
 export const TransactionsContext = createContext<TransactionsContextData>(
     {} as TransactionsContextData
-);
+    );
  
 export function TransactionsProvider({children}: TransactionsProviderProps){
     const [transactions, setTransactions] = useState<Transaction[]>([]);

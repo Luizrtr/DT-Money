@@ -23,13 +23,9 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
 
   function handleCreateNewTransaction(event: FormEvent){
     event.preventDefault();
-    
-    createTransaction({
-      title,
-      amount,
-      category,
-      type,
-    })
+
+    createTransaction({amount, category, title, type})
+
     }
 
   return(
@@ -74,6 +70,7 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
         
 
         <input 
+        type="text"
         placeholder="Categoria"  
         value={category}
         onChange={event => setCategory(event.target.value)}
