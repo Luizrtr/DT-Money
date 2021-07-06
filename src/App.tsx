@@ -10,7 +10,6 @@ import { NewTransactionModal } from './components/NewTransactionModal';
 Modal.setAppElement('#root');
 
 export function App() {
-  //modal
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
 
   function handleOpenNewTransactionModal(){
